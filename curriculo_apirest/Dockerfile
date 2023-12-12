@@ -33,7 +33,7 @@ VOLUME /tmp
  
 # Copiar o arquivo JAR do estágio de construção para o estágio de execução
 
-COPY --from=build /workspace/app/target/curriculos-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /target/curriculos-0.0.1-SNAPSHOT.jar app.jar
  
 # Indicar que o container irá escutar na porta 8080
 
