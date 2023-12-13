@@ -10,7 +10,7 @@ WORKDIR /workspace/app
 
 COPY mvnw .
 
-COPY .mvn  .
+COPY .mvn .mvn
 
 COPY pom.xml .
 
