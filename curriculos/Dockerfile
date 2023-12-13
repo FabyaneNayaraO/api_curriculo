@@ -22,7 +22,7 @@ RUN chmod +x ./mvnw
  
 # Construir o aplicativo com Maven Wrapper
 
-RUN -f ./mvnw clean install
+RUN -f ./mvn clean install
 
  
 # Segunda etapa da construção, para obter uma imagem mais limpa e leve
