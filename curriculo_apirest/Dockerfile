@@ -8,7 +8,13 @@ WORKDIR /workspace/app
  
 # Copiar o arquivo pom.xml e os arquivos de código fonte
 
-COPY . .
+COPY mvnw .
+
+COPY .mvn .mvn
+
+COPY pom.xml .
+
+COPY src src
  
 # Dar permissão de execução ao Maven Wrapper
 
@@ -27,7 +33,7 @@ VOLUME /tmp
  
 # Copiar o arquivo JAR do estágio de construção para o estágio de execução
 
-COPY --from=build /target/curriculos-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /workspace/app/target/curriculos-0.0.1-SNAPSHOT.jar app.jar
  
 # Indicar que o container irá escutar na porta 8080
 
