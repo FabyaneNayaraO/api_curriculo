@@ -8,13 +8,7 @@ WORKDIR /workspace/app
  
 # Copiar o arquivo pom.xml e os arquivos de código fonte
 
-COPY mvnw .
-
-COPY .mvn .mvn
-
-COPY pom.xml .
-
-COPY src src
+COPY . .
  
 # Dar permissão de execução ao Maven Wrapper
 
